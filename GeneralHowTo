@@ -1,0 +1,141 @@
+* Emacs Shortcuts
+** Doom Emacs Config Files
+Do not play with any files in .emacs.d/ dir.
+
+Doom emacs uses its own =.doom.d/= directory which you should configure.
+
+When you make changes run =doom refresh= in .doom.d/
+
+-----
+
+*** init.el inside .doom.d/
+
+Comment and uncomment lines to activate/diactivate features. Cont do anything else in this file.If you want support for some feature uncomment that line.
+
+*** config.el inside .doom.d/
+
+Add your custom settings in this file.
+
+Such as changing fonts, theme and all other configs here.
+
+*** packages.el inside .doom.d/
+
+Add all packages you want to install to in this file
+
+Once you added packages run =doom sync= to install those packages.
+
+** Config Files
+*Open config folder*: =space + f +p=
+
+*Install Packages*: =M-x package-install= find the package and install it. Then reload doom emacs =space h r r=
+** Configuration of Doom Emacs
+
+Whenever you update one of those files, reload emacs with =space h r r=
+
+*** init.el
+
+Go to =.doom.d/init.el=
+
+*Uncomment to activate*
+- neotree
+- in *term section*: vterm
+- enable languages in lang
+
+Once done, hit =space h r r= to reload emacs.
+
+*** config.el
+This is the config file where you actually edit things.
+
+You can create your functions etc.
+*** packages.el
+Where you place third party packages that are not part of the doom emacs system.
+
+Add your packages here to install.
+
+ex: =(package! nameOfThePackage)=
+
+** Open Files
+
+=Space .= = Open file explorer
+
+=C-x, C-f=
+** Default File Settings
+
+Show Images by default in Emacs
+=#+STARTUP: inlineimages=
+
+** Folding
+=zc= - Fold current level
+=zo= - UnFold current level
+
+=zr= - UnFold entire buffer
+=zR= - Fold entire buffer
+
+** Moving
+=gj= - Go to one level below, like one heading below
+=gh= - Go to one level up
+
+** Export to html
+=C-c, C-e=
+** Horizontal Line
+Add at least 5 - dashes
+** Bookmarks
+*** Open Bookmarks for Files
+=space + Return=
+
+*** Create Bookmarks for a File
+=space + .= go to directory editor (dired) then open the file.
+
+=space + return= create or jump to bookmark: Give name to new bookmarks
+
+*** Delete a bookmark:
+=M-x bookmark-delete=
+
+** Buffers
+Open all buffers: =space + b B=
+
+Open Buffers list for current workspace: =space + b b=
+
+Create a new buffer: =space + b + N= then =space + .= to open dired (File Explorer)
+
+Save the buffer: =space + b + s=
+
+Kill a buffer: =space + b + k=
+** Windows
+Create a vertical window: =space + w + v=
+
+Create a horizontal window: =space + w + s=
+
+Close selected window: =space + w + c= or =space + w + w=
+
+** Tags
+*** Create Tags
+=Space + m + q=
+
+Ex: =personal,life=
+
+If you assign a tag to chapter header it will be implicitly assigned to below lines.
+
+Repeat last command : =space + q=
+*** Search Tags
+=M-x org-sparce-tree  select m=
+
+This will reorganize your current parent and show results.
+
+** Usefull Commands
+Repeat last command: =Space + q=
+
+Open URL links: =C-c C-o=
+** neotree
+Open neotree: =M-x neotree=.
+
+Kill neotree: =control w c=
+** yasnippet
+
+=M-x install packages=
+
+=yasnippet-snippet=
+
+Create a new snippet: =M-x yas-new-snippet=
+
+If you are creating those snippets for org lets say, create a folder under .doom.d/snippet/org-mode and save snippets in it.
